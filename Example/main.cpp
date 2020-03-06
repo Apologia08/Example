@@ -33,7 +33,6 @@ using namespace std;
 int main()
 {
 	Object* state = new Object[stageWidth * stageHeight];
-	Initialize(state, stageWidth, stageHeight, stageData);
 
 	while (true)
 	{
@@ -59,6 +58,7 @@ int main()
 
 void Initialize(Object* state, int w, int h, const char* stageData)
 {
+	//const char의 포인터라는 뜻(주소 값 변경 가능)
 	const char* d = stageData;
 	int x = 0;
 	int y = 0;
